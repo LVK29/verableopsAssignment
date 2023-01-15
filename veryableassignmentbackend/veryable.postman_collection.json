@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "b9f0565c-a113-4d32-bead-2ae9eed63fa2",
+		"name": "veryable",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12045302"
+	},
+	"item": [
+		{
+			"name": "createBusinesses",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorID",
+						"value": "kartik_324234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Verable\",\n    \"email\":\"employee1@verable.com\",\n    \"phonenumber\":\"+1 999-999-9999\",\n    \"businessinfo\":\"Veryable’s mission is to revitalize the manufacturing and logistics sectors with a new labor model: an on-demand marketplace built on a sharing economy model for skilled blue collar labor. The “pooled labor” approach provides businesses with access to infinite, flexible capacity in real-time, allowing them to grow revenue and eliminate the cost to scale. At the same time, it gives any skilled worker continuous access to income. We are committed to transforming an antiquated and inefficient labor market into one that puts more people to work and eliminates constraints and unnecessary burdens on businesses.\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/businesses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"businesses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOperator",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorID",
+						"value": "kartik_324234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Kartikeyan LV\",\n    \"email\":\"lvkartikeyan@gmail.com\",\n    \"phonenumber\":\"+1 111-222-3333\",\n    \"userinfo\":\"My Expertise is in backend development\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/operator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"operator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createJobForBusiness",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorID",
+						"value": "kartik_324234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jobTitle\":\"enior Backend Engineer - WFM\",\n    \"descriptions\":\"The Senior Backend Engineer will serve as a technical expert on the Workforce Management (WFM) team at Veryable. Your day-to-day work will require you to work with product managers, designers, and engineers to define objectives and propose strategies and deliverables to meet those objectives. You will get to solve the hard engineering problems of scaling our product, reducing latency, ensuring security, and improving technical excellence, all while mentoring engineers, shaping the team culture, influencing engineering processes, and helping to guide the direction of our products. Specifically, you’ll be collaborating with 7 backend and frontend developers, a designer, a product manager, and will have the support and supervision of an engineering manager.\",\n    \"openings\":3\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/businesses/63c4742898ec2d0f320c217b/job",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"businesses",
+						"63c4742898ec2d0f320c217b",
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallJobForBusiness",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorID",
+						"value": "kartik_324234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/businesses/63c4586b7450664a7cabd576/jobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"businesses",
+						"63c4586b7450664a7cabd576",
+						"jobs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "createJobForBusiness Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorID",
+								"value": "kartik_324234",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jobTitle\":\"Sr dev\",\n    \"descriptions\":\"work on hard tsks\",\n    \"openings\":\"+1 715-123-3214\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/businesses/63c3a99e6bc3e30845569905/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"businesses",
+								"63c3a99e6bc3e30845569905",
+								"jobs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 Jan 2023 08:50:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "createOps",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "authorID",
+						"value": "kartik_324234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"operatorId\":\"63c4745898ec2d0f320c217d\",\n    \"opsId\":\"63c474c098ec2d0f320c2188\",\n    \"startdate\":\"01-01-2023 03:30:00\",\n    \"enddate\":\"01-15-2023 05:30:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSchedulesForOperator",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "authorID",
+						"value": "kartik_324234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/operators/63c4745898ec2d0f320c217d/schedules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"operators",
+						"63c4745898ec2d0f320c217d",
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
